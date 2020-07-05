@@ -1,0 +1,8 @@
+CSS @media Rule =>
+https://www.w3schools.com/cssref/css3_pr_mediaquery.asp
+
+CSS Flexbox =>
+https://www.w3schools.com/css/css3_flexbox.asp
+
+Responsive Web Design
+https://www.w3schools.com/css/css_rwd_intro.asp
