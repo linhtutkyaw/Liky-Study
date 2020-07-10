@@ -1,0 +1,11 @@
+@media screen and (orientation:portrait)
+{
+  body{background-image: url("FB_IMG_1491612056388.jpg");}
+}
+
+@media screen and (orientation:landscape)
+{
+	body{background-image:url("FB_IMG_1491612083018.jpg");
+}
+
+
