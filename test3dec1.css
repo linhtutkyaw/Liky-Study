@@ -1,0 +1,11 @@
+@media screen and (orientation:portrait)
+{
+  body{background-image: url("portrait.jpg");background-repeat: no-repeat;background-size: cover;}
+}
+
+@media screen and (orientation:landscape)
+{
+	body{background-image:url("landscape.png");background-repeat: no-repeat;background-size: cover;color:#fff;}
+}
+
+
