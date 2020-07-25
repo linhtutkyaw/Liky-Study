@@ -15,22 +15,33 @@
 			height: 100%;
   			padding: 0;
   			margin: 0;
+  			position: absolute;
+  			left: 0;
+  			right: 0;
+  			z-index: 0;
 		}
 		.circle{
-			width: 20vh;
-			height: 20vh;
+			width: 30vw;
+			height: 30vw;
+			background-color: #ff0;
+			border-radius: 15vw;
+			position: absolute;
+			left: 35vw;
+			top: 0;
+			z-index: 10;
 		}
 	</style>
 </head>
 <body>
+
+	<div id="circle" class="circle">
+
+	</div>
 	<div class="bg">
 		<svg id="bg" xmlns="http://www.w3.org/2000/svg" version="1.1">
 			<path id="back" d="M 0 0 l 1000 0 l 0 3000 l -1000 0 Z" fill="#fff"/>
 			<path id="head" d="M 0 0 l 0 200 q 200 70 500 0 q 300 -70 500 0 l 0 -200 Z" fill="#6410A6">
 		</svg>
-	</div>
-	<div class="circle">
-
 	</div>
 </body>
 <script type="text/javascript">
@@ -38,14 +49,16 @@
 		 	if (x.matches) { // If media query matches
     			 document.getElementById("bg").setAttribute("viewBox", "0 0 1000 1000");
     			 document.getElementById("head").setAttribute("d","M 0 0 l 0 200 q 200 70 500 0 q 300 -70 500 0 l 0 -200 Z");
+    			 document.getElementById("circle").style.top=(window.innerWidth*(0.2-0.15))+"px";
   			} else {
   				 document.getElementById("bg").setAttribute("viewBox", "0 0 1000 3000");
   				 document.getElementById("head").setAttribute("d","M 0 0 l 0 450 q 200 70 500 0 q 300 -70 500 0 l 0 -450 Z");
+    			 document.getElementById("circle").style.top=(window.innerWidth*(0.45-0.15))+"px";
   			}
 		}
 
-		var x = window.matchMedia("(orientation: landscape)")
-		myFunction(x) // Call listener function at run time
-		x.addListener(myFunction) // Attach listener function on state changes
-	</script>
+		var x = window.matchMedia("(orientation: landscape)");
+		myFunction(x); // Call listener function at run time
+		x.addListener(myFunction); // Attach listener function on state changes
+</script>
 </html>
